@@ -1,0 +1,225 @@
+.spotlight{
+    padding:$padding-navy;
+
+    &-head{
+        padding:20px 0px;
+
+    }
+
+    &-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+        &-wrapper{
+            border-bottom:1px solid darken($bg-dark-color,5);
+            border-radius: 5px;
+            position: relative;
+            margin:0px 10px;
+            padding:15px;
+            font-size: 15px;
+            line-height: 30px;
+
+            &:hover{
+                background: $bg-dark-color;
+                
+                h3{
+                    color:darkblue;
+                }
+            }
+
+            p{
+                color:$main-color;  
+                @include marginate;
+            }
+
+            div{
+                @include marginate;
+                display: flex;
+                flex-wrap: wrap;
+
+                span{
+                    padding:0px 10px 0 0;
+                }
+            }
+
+            h3{
+                @include marginate;
+                span{
+                    position: absolute;top:0px;left:0px;
+                    width:50px;
+                    height:100%;
+                    padding:5px;
+                    img{
+                        height: 30%;
+                        width:100%;
+                        // display: none;
+                    }
+                }
+            }
+
+            &:nth-child(1){
+                p,h3,div{
+                    margin:0;
+                }
+            }
+
+            &:nth-child(2){
+                p,h3,div{
+                    margin:0;
+                }
+            }
+        }
+    }
+
+
+    &-popular{
+        padding:40px 0;
+        &-content{
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            justify-content: space-between;
+
+            &-wrapper{
+                border:1px solid darken($bg-dark-color,5);
+                border-radius: 5px;
+                position: relative;
+                margin:10px;
+                padding:5px;
+                font-size: 15px;
+                line-height: 30px;
+    
+                &:hover{
+                    background: $bg-dark-color;
+                    
+                    h3{
+                        color:darkblue;
+                    }
+                }
+    
+                p{
+                    color:$main-color;  
+                    line-height: 30px;
+                }
+
+                
+    
+                div{
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    
+    
+                    span{
+                        padding:0px 10px 0 0;
+                    }
+                }
+    
+                img{
+                    height: 40px;
+                    width:40px;
+                    // display: none;
+
+                    &[src="img/popteam-image.avif"]{
+                        height:30px;
+                    }
+                }
+                h3{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        width:50px;
+                        height:100%;
+                        padding:5px;
+                        
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}
+
+.get-started-postman{
+    display: flex;
+    justify-content: space-between;
+    padding:$padding-navy;
+    background: $bg-dark-color;
+
+    &-wrapper{
+        margin:120px 0px 0px 0px;
+
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color:$hover-color;
+        }
+
+        span{
+            display: flex;
+            margin:20px 0px;
+
+            input{
+                padding:10px;
+                border:1px solid $orange-color;
+                border-radius: 5px 0px 0px 5px;
+                color:$main-color;
+
+            }
+
+            button{
+                border-radius: 0px 5px 5px 0px;
+                background: $orange-color;
+                color:white;
+                border:1px solid $orange-color;
+            }
+        }
+
+        
+    }
+
+    &-image{
+        margin:80px 60px 0px 0px;
+        img{
+            width:40rem;
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding:$padding-navy;
+
+    &-image-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:200px;
+        }
+
+        p{
+            line-height: 40px;
+        }
+    }
+
+    &-links{
+        padding:20px;
+        display:flex;
+        justify-content: space-around;
+
+        &-wrapper{
+            padding:40px;
+            color:$main-color;
+
+            a{
+                color:$main-color;
+            }
+        }
+    }
+}
+
