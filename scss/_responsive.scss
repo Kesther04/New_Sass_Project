@@ -1,0 +1,258 @@
+@include media-sm{
+    .head-container{
+        display: flex;
+        height:auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding:5px;
+
+        .head-con-wrapper{
+            display: flex;
+            flex-direction: column;
+            width:0;
+            height: 0;
+            visibility: hidden;
+
+            &.open {
+                visibility: visible;
+                width:auto;
+                height:auto;
+            }
+        }
+    }
+
+    .head-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transform: translateY(-100%);
+        @include transition-ease;
+
+        &.open {
+            transform: translateY(0);
+        }
+
+        input{
+            margin:5px 0px;
+            transform: translateX(300vw);
+            @include transition-ease;
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+
+        button{
+            margin:5px 0px;
+            transform: translateX(300vw);
+            @include transition-ease;
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .nav-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .head-logo{
+            width:30px;
+        }
+        nav{
+            ul{
+                flex-direction: column;
+                transform: translateY(-100%);
+                @include transition-ease;
+
+                
+                &.open {
+                    transform: translateY(0);
+                }
+                
+                li{
+                    padding:20px 0;
+                    transform: translateX(300vw);
+                    @include transition-ease;
+
+                    &.open {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-btn{
+        visibility: visible;
+        height: 20px;
+        width:28px;
+    }
+
+    .join-postman{
+        padding:5px;
+        flex-direction: column;
+
+        &-image{
+            width:15rem;
+        }
+
+        .apiLog{
+            .signUp{
+                display: flex;
+                flex-direction: column;
+                margin:20px 0px;
+                
+                button{
+                    padding:10px;
+                }
+            }
+        }
+    }
+
+    .what-postman{
+        padding:5px;
+
+        &-wrapper{
+            padding:200px 0 0 0;
+        }
+
+        &-image{
+            position: absolute;right:0px;top:730px;
+            width:200px;
+            z-index:5;
+        }
+
+        &-content{
+            grid-template-columns: repeat(1 , 1fr);
+
+            &-wrapper{
+                margin:10px 0;
+            }
+        }
+    }    
+    
+    .what-happen-postman{
+        padding:5px;
+
+        &-content{
+            grid-template-columns: repeat(1, 1fr);
+
+            &-wrapper{
+                margin:5px 0px;
+            }
+        }
+    }
+
+    .second-body-container{
+        overflow: hidden;
+        height: 400px;
+        width: 100%;
+        object-fit: fill;
+        .postman-ad{
+            padding:10px;
+            display: flex;
+            flex-direction: column;
+        
+            &-content{
+                display: block;
+    
+                p{
+                    color:white;
+
+                    img{
+                        width:200px;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .spotlight{
+        padding:0px;
+    
+        &-head{
+            padding:20px 0px;
+    
+        }
+    
+        &-content{
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: repeat(1, 1fr);
+            overflow: hidden;
+            &-wrapper{
+                margin:0px;
+                padding:0px;
+                overflow: hidden;
+            }
+        }
+    
+    
+        &-popular{
+            padding:40px 0;
+            &-content{
+                display: grid;
+                grid-template-columns: repeat(1 , 1fr);
+                justify-content: space-between;
+    
+    
+    
+            }
+    
+        }
+    }
+
+        
+    .get-started-postman{
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+
+        &-wrapper{
+            margin:120px 0px 0px 0px;
+
+
+
+            span{
+                display: flex;
+                flex-direction: column;
+                
+
+               
+            }
+
+            
+        }
+
+        &-image{
+            margin:80px 0px;
+            img{
+                width:10rem;
+            }
+        }
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+        &-links{
+            padding:10px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            
+            &-wrapper{
+                padding:10px;
+            }
+        }
+    }
+ 
+}

@@ -1,3 +1,192 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.head-container {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+.head-container .head-con-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.head-container .head-logo {
+  width: 30px;
+}
+.head-container .head-logo img {
+  width: 100%;
+}
+
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-wrapper input {
+  padding: 12px 10px;
+  border-radius: 5px;
+  background: whitesmoke;
+  color: grey;
+  outline: none;
+  border: 0px solid grey;
+}
+.head-wrapper button {
+  border: 1px solid grey;
+  background: none;
+  border-radius: 5px;
+  padding: 12px 10px;
+  margin: 0 10px;
+}
+.head-wrapper button:nth-child(3) {
+  background: rgb(255, 94, 0);
+  color: white;
+  border: 1px solid rgb(255, 94, 0);
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-wrapper nav {
+  display: flex;
+}
+.nav-wrapper nav ul {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+}
+.nav-wrapper nav ul li {
+  display: flex;
+  padding: 0 20px 0 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+}
+.nav-wrapper nav ul li:focus {
+  color: black;
+}
+.nav-wrapper nav ul li .dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 8vh;
+  background: white;
+  color: grey;
+  box-shadow: 2px 1px 5px 3px rgb(216, 216, 216);
+  padding: 20px;
+  border-radius: 10px;
+  visibility: hidden;
+  transition: 0.4s ease-in;
+  opacity: 0;
+  z-index: 10;
+}
+.nav-wrapper nav ul li .dropdown-menu div {
+  padding: 0 20px;
+}
+.nav-wrapper nav ul li .dropdown-menu div h3 {
+  color: black;
+}
+.nav-wrapper nav ul li .dropdown-menu div a {
+  font-weight: 400;
+}
+.nav-wrapper nav ul li:focus .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.nav-wrapper nav ul li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+.nav-wrapper nav ul li a:hover {
+  color: black;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn__burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+main {
+  margin-top: 8vh;
+}
+
 .first-body-container {
   width: 100%;
   height: auto;
@@ -352,135 +541,200 @@
   color: grey;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-button {
-  cursor: pointer;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  margin: 0;
-}
-
-.head-container {
-  width: 100%;
-  height: 8vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
-  position: fixed;
-  top: 0;
-  background: white;
-  z-index: 10;
-}
-.head-container .head-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.head-container .head-wrapper input {
-  padding: 12px 10px;
-  border-radius: 5px;
-  background: whitesmoke;
-  color: grey;
-  outline: none;
-  border: 0px solid grey;
-}
-.head-container .head-wrapper button {
-  border: 1px solid grey;
-  background: none;
-  border-radius: 5px;
-  padding: 12px 10px;
-  margin: 0 10px;
-}
-.head-container .head-wrapper button:nth-child(3) {
-  background: rgb(255, 94, 0);
-  color: white;
-  border: 1px solid rgb(255, 94, 0);
-}
-
-.nav-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.nav-wrapper .head-logo {
-  width: 30px;
-}
-.nav-wrapper .head-logo img {
-  width: 100%;
-}
-.nav-wrapper nav {
-  display: flex;
-}
-.nav-wrapper nav ul {
-  display: flex;
-  margin: 0;
-  padding: 10px;
-}
-.nav-wrapper nav ul li {
-  display: flex;
-  padding: 0 20px 0 0;
-  margin: 0;
-  font-weight: bold;
-  font-size: 15px;
-  color: grey;
-  cursor: pointer;
-}
-.nav-wrapper nav ul li:focus {
-  color: black;
-}
-.nav-wrapper nav ul li .dropdown-menu {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 8vh;
-  background: white;
-  color: grey;
-  box-shadow: 2px 1px 5px 3px rgb(216, 216, 216);
-  padding: 20px;
-  border-radius: 10px;
-  visibility: hidden;
-  transition: 0.4s ease-in;
-  opacity: 0;
-  z-index: 10;
-}
-.nav-wrapper nav ul li .dropdown-menu div {
-  padding: 0 20px;
-}
-.nav-wrapper nav ul li .dropdown-menu div h3 {
-  color: black;
-}
-.nav-wrapper nav ul li .dropdown-menu div a {
-  font-weight: 400;
-}
-.nav-wrapper nav ul li:focus .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
-}
-.nav-wrapper nav ul li a {
-  text-decoration: none;
-  color: grey;
-  font-weight: bold;
-  font-size: 15px;
-}
-.nav-wrapper nav ul li a:hover {
-  color: black;
-}
-
-main {
-  margin-top: 8vh;
+@media screen and (max-width: 500px) {
+  .head-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  .head-container .head-con-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .head-container .head-con-wrapper.open {
+    visibility: visible;
+    width: auto;
+    height: auto;
+  }
+  .head-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper.open {
+    transform: translateY(0);
+  }
+  .head-wrapper input {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper input.open {
+    transform: translateX(0);
+  }
+  .head-wrapper button {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper button.open {
+    transform: translateX(0);
+  }
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-wrapper .head-logo {
+    width: 30px;
+  }
+  .nav-wrapper nav ul {
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul.open {
+    transform: translateY(0);
+  }
+  .nav-wrapper nav ul li {
+    padding: 20px 0;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul li.open {
+    transform: translateX(0);
+  }
+  .menu-btn {
+    visibility: visible;
+    height: 20px;
+    width: 28px;
+  }
+  .join-postman {
+    padding: 5px;
+    flex-direction: column;
+  }
+  .join-postman-image {
+    width: 15rem;
+  }
+  .join-postman .apiLog .signUp {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+  }
+  .join-postman .apiLog .signUp button {
+    padding: 10px;
+  }
+  .what-postman {
+    padding: 5px;
+  }
+  .what-postman-wrapper {
+    padding: 200px 0 0 0;
+  }
+  .what-postman-image {
+    position: absolute;
+    right: 0px;
+    top: 730px;
+    width: 200px;
+    z-index: 5;
+  }
+  .what-postman-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .what-postman-content-wrapper {
+    margin: 10px 0;
+  }
+  .what-happen-postman {
+    padding: 5px;
+  }
+  .what-happen-postman-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .what-happen-postman-content-wrapper {
+    margin: 5px 0px;
+  }
+  .second-body-container {
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .second-body-container .postman-ad {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .second-body-container .postman-ad-content {
+    display: block;
+  }
+  .second-body-container .postman-ad-content p {
+    color: white;
+  }
+  .second-body-container .postman-ad-content p img {
+    width: 200px;
+  }
+  .spotlight {
+    padding: 0px;
+  }
+  .spotlight-head {
+    padding: 20px 0px;
+  }
+  .spotlight-content {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+  }
+  .spotlight-content-wrapper {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  .spotlight-popular {
+    padding: 40px 0;
+  }
+  .spotlight-popular-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+  }
+  .get-started-postman {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .get-started-postman-wrapper {
+    margin: 120px 0px 0px 0px;
+  }
+  .get-started-postman-wrapper span {
+    display: flex;
+    flex-direction: column;
+  }
+  .get-started-postman-image {
+    margin: 80px 0px;
+  }
+  .get-started-postman-image img {
+    width: 10rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .footer-links {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .footer-links-wrapper {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -5,10 +5,43 @@ $bg-dark-color:rgb(245, 243, 244);
 $padding-navy:0 60px 50px 180px;
 
 
+@mixin transition-ease {
+    transition:  all 0.5s ease-in-out;
+
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+} 
+
 @mixin marginate{
     margin:0 0 0 50px;
 }
 
 @mixin webkit{
     -webkit-background-clip: text;
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+
+@mixin media-md {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+
+@mixin media-lg {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
 }
