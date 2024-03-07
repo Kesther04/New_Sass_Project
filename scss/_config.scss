@@ -27,7 +27,7 @@ $padding-navy:0 60px 50px 180px;
 }
 
 @mixin media-sm {
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 550px) {
         @content;
     }
 }

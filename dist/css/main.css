@@ -541,7 +541,248 @@ main {
   color: grey;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
+  .head-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+  }
+  .head-container .head-con-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .head-container .head-con-wrapper.open {
+    visibility: visible;
+    width: auto;
+    height: auto;
+  }
+  .head-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper.open {
+    transform: translateY(0);
+  }
+  .head-wrapper input {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper input.open {
+    transform: translateX(0);
+  }
+  .head-wrapper button {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper button.open {
+    transform: translateX(0);
+  }
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-wrapper .head-logo {
+    width: 30px;
+  }
+  .nav-wrapper nav ul {
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul.open {
+    transform: translateY(0);
+  }
+  .nav-wrapper nav ul li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul li.open {
+    transform: translateX(0);
+  }
+  .nav-wrapper nav ul li .dropdown-menu {
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    overflow: auto;
+    padding: 0px;
+    transform: translateY(-10);
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div {
+    padding: 0 20px;
+    background-color: white;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div h3 {
+    color: black;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div a {
+    font-weight: 400;
+  }
+  .nav-wrapper nav ul li .dropdown-menu.open {
+    visibility: visible;
+  }
+  .nav-wrapper nav ul li:focus .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) translateX(100%);
+    position: static;
+    top: 10px;
+    margin: 10px 0;
+  }
+  .menu-btn {
+    visibility: visible;
+    height: 20px;
+    width: 28px;
+  }
+  .join-postman {
+    padding: 5px;
+    flex-direction: column;
+  }
+  .join-postman-image {
+    width: 30rem;
+  }
+  .join-postman .apiLog {
+    margin: 20px 0px;
+  }
+  .join-postman .apiLog .signUp {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+  }
+  .join-postman .apiLog .signUp button {
+    padding: 10px;
+  }
+  .what-postman {
+    padding: 5px;
+  }
+  .what-postman-wrapper {
+    padding: 200px 0 0 0;
+  }
+  .what-postman-image {
+    position: absolute;
+    right: 0px;
+    top: 730px;
+    width: 200px;
+    z-index: 5;
+  }
+  .what-postman-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .what-postman-content-wrapper {
+    margin: 10px 5px;
+  }
+  .what-happen-postman {
+    padding: 5px;
+  }
+  .what-happen-postman-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .what-happen-postman-content-wrapper {
+    margin: 5px 0px;
+  }
+  .second-body-container {
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .second-body-container .postman-ad {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  }
+  .second-body-container .postman-ad-content {
+    display: block;
+  }
+  .second-body-container .postman-ad-content p {
+    color: white;
+  }
+  .second-body-container .postman-ad-content p img {
+    width: 200px;
+  }
+  .spotlight {
+    padding: 0px;
+  }
+  .spotlight-head {
+    padding: 20px 0px;
+  }
+  .spotlight-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+  .spotlight-content-wrapper {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  .spotlight-popular {
+    padding: 40px 0;
+  }
+  .spotlight-popular-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+  .get-started-postman {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .get-started-postman-wrapper {
+    margin: 20px 0px 0px 0px;
+  }
+  .get-started-postman-wrapper span {
+    display: flex;
+    flex-direction: row;
+  }
+  .get-started-postman-image {
+    margin: 20px 0px;
+  }
+  .get-started-postman-image img {
+    width: 15rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .footer-links {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .footer-links-wrapper {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
   .head-container {
     display: flex;
     height: auto;
