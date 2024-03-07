@@ -5,9 +5,12 @@ const menuNav = document.querySelector('.nav-wrapper nav ul');
 const navItems = document.querySelectorAll('.nav-wrapper nav ul li');
 const headCon = document.querySelectorAll('.head-wrapper');
 const conHead = document.querySelectorAll('.head-wrapper input,.head-wrapper button');
+// const headContan = document.querySelectorAll('.nav-wrapper nav ul li.tab ');
+// const dropDown = document.querySelectorAll('.dropdown-menu'); 
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+// headContan.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     if (!showMenu) {
@@ -19,7 +22,11 @@ function toggleMenu() {
         conHead.forEach(item => item.classList.add('open'));
 
         showMenu = true;
-    }else{
+    }
+    // else if (headCont) {
+    //     dropDown.forEach(item => item.classList.add('open'));
+    // }
+    else{
         hamburger.classList.remove('open');
         nav.classList.remove('open');
         menuNav.classList.remove('open');
