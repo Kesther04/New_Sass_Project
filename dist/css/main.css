@@ -541,6 +541,188 @@ main {
   color: grey;
 }
 
+@media screen and (max-width: 1400px) {
+  .head-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+  }
+  .head-container .head-con-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .head-container .head-con-wrapper.open {
+    visibility: visible;
+    width: auto;
+    height: auto;
+  }
+  .head-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper.open {
+    transform: translateY(0);
+  }
+  .head-wrapper input {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper input.open {
+    transform: translateX(0);
+  }
+  .head-wrapper button {
+    margin: 5px 0px;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .head-wrapper button.open {
+    transform: translateX(0);
+  }
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-wrapper .head-logo {
+    width: 30px;
+  }
+  .nav-wrapper nav ul {
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul.open {
+    transform: translateY(0);
+  }
+  .nav-wrapper nav ul li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    transform: translateX(300vw);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-wrapper nav ul li.open {
+    transform: translateX(0);
+  }
+  .nav-wrapper nav ul li .dropdown-menu {
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    overflow: auto;
+    padding: 0px;
+    transform: translateY(-10);
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div {
+    padding: 0 20px;
+    background-color: white;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div h3 {
+    color: black;
+  }
+  .nav-wrapper nav ul li .dropdown-menu div a {
+    font-weight: 400;
+  }
+  .nav-wrapper nav ul li .dropdown-menu.open {
+    visibility: visible;
+  }
+  .nav-wrapper nav ul li:focus .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) translateX(100%);
+    position: static;
+    top: 10px;
+    margin: 10px 0;
+  }
+  .menu-btn {
+    visibility: visible;
+    height: 20px;
+    width: 28px;
+  }
+  .join-postman {
+    padding: 0 60px 50px 100px;
+  }
+  .join-postman-image {
+    width: 40rem;
+  }
+  .join-postman-image img {
+    width: 100%;
+  }
+  .what-postman {
+    background: rgb(245, 243, 244);
+    padding: 0 60px 50px 100px;
+  }
+  .what-postman-wrapper {
+    padding: 100px 0 50px 0;
+  }
+  .what-postman-image {
+    position: absolute;
+    right: 200px;
+    top: 450px;
+    width: 300px;
+    z-index: 5;
+  }
+  .what-postman-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+  .what-postman-learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .what-postman-learn-more button {
+    margin: 40px 0;
+    padding: 10px;
+    border: 1px solid grey;
+  }
+  .what-happen-postman {
+    padding: 0 60px 50px 100px;
+  }
+  .second-body-container .postman-ad {
+    padding: 40px 40px 40px 100px;
+  }
+  .spotlight {
+    padding: 0 60px 50px 100px;
+  }
+  .spotlight-popular-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .get-started-postman {
+    padding: 0 60px 50px 100px;
+  }
+  .get-started-postman-image {
+    margin: 40px 0px 0px 0px;
+  }
+  .get-started-postman-image img {
+    width: 30rem;
+  }
+  .footer {
+    padding: 0 60px 50px 100px;
+  }
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 1024px) {
   .head-container {
     display: flex;
